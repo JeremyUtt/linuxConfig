@@ -16,7 +16,7 @@ alias server="ssh jeremy@100.105.146.100"
 alias cat="bat"
 alias get="sudo apt install"
 alias get-audio="pactl list | grep -A2 'Sink #' | grep 'Name: ' | cut -d' ' -f2"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/configStore/ --work-tree=$HOME'
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
