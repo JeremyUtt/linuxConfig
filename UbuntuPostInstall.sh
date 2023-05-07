@@ -1,12 +1,34 @@
+# ==================================
+# ===== Install ZSH/oh-my-zsh ======
+# ==================================
 
-
-sudo apt install neovim zsh
+sudo apt install zsh
 
 # download oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# chsh -s $(which zsh)
+# ===========================
+# ===== Install Neovim ======
+# ===========================
+
+# install dependencies
+sudo apt-get install ninja-build gettext cmake unzip curl -y
+
+cd tmp
+git clone https://github.com/neovim/neovim
+cd neovim
+make CMAKE_BUILD_TYPE=Release # Build latest source
+
+cd build
+cpack -G DEB # package into Deb file
+sudo dpkg -i nvim-linux64.deb # install Deb
+
+# ========================================
+# ===== Install Neovim kickstart.sh ======
+# ========================================
 
 # download nvim kickstart.sh
 mkdir ~/.config
 git clone https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim
+rm -rf ~./config/nvim/.git
+
