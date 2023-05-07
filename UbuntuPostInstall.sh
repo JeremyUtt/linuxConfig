@@ -18,6 +18,7 @@ sudo apt-get install ninja-build gettext cmake unzip curl -y
 cd tmp
 git clone https://github.com/neovim/neovim
 cd neovim
+git checkout stable
 make CMAKE_BUILD_TYPE=Release # Build latest source
 
 cd build
