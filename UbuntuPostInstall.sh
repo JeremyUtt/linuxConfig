@@ -1,3 +1,5 @@
+#! /usr/bin/bash
+
 # ==================================
 # ===== Install ZSH/oh-my-zsh ======
 # ==================================
@@ -14,7 +16,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # install dependencies
 sudo apt-get install ninja-build gettext cmake unzip curl -y
 
-cd tmp
+cd ~
 git clone https://github.com/neovim/neovim
 cd neovim
 make CMAKE_BUILD_TYPE=Release # Build latest source
